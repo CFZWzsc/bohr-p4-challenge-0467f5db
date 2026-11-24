@@ -1,0 +1,91 @@
+{
+  "demo": true,
+  "synthetic": true,
+  "case_id": "demo-0467f5db-nlrp3-saki",
+  "note": "Synthetic, self-contained demo case. All titles, DOIs (10.0000/...) and findings are fabricated for testing only; they do not describe real publications.",
+  "topic": "Coverage of a reference set on NLRP3 inflammasome signalling in sepsis-associated acute kidney injury",
+  "queries": [
+    {
+      "query": "NLRP3 AND pyroptosis AND sepsis",
+      "source": "pubmed",
+      "field": "title_abstract",
+      "year_from": 2015,
+      "year_to": 2024
+    }
+  ],
+  "search_scope": {
+    "sources": ["pubmed"],
+    "fields": ["title", "abstract"],
+    "date_from": 2015,
+    "date_to": 2024
+  },
+  "reference_set": [
+    {
+      "id": "R1",
+      "title": "NLRP3 inflammasome activation drives tubular injury in septic acute kidney injury",
+      "doi": "10.0000/demo.r1",
+      "year": 2019
+    },
+    {
+      "id": "R2",
+      "title": "Gasdermin D mediates pyroptosis in sepsis-associated acute kidney injury",
+      "doi": "10.0000/demo.r2",
+      "year": 2021
+    },
+    {
+      "id": "R3",
+      "title": "Urinary NLRP3 as a biomarker of septic acute kidney injury",
+      "doi": "10.0000/demo.r3",
+      "year": 2023
+    }
+  ],
+  "retrieved": [
+    {
+      "id": "hit-1",
+      "title": "NLRP3 inflammasome activation drives tubular injury in septic acute kidney injury.",
+      "doi": "10.0000/demo.r1",
+      "year": 2019,
+      "source": "pubmed",
+      "retrieved_at": "run-1"
+    },
+    {
+      "id": "hit-2",
+      "title": "Gasdermin D mediates pyroptosis in sepsis associated acute kidney injury",
+      "year": 2021,
+      "source": "pubmed",
+      "retrieved_at": "run-1"
+    },
+    {
+      "id": "hit-3",
+      "title": "Sepsis-induced acute kidney injury: a narrative overview",
+      "doi": "10.0000/demo.x1",
+      "year": 2020,
+      "source": "pubmed",
+      "retrieved_at": "run-1"
+    }
+  ],
+  "supplementary_queries": [
+    {
+      "query": "urinary biomarkers septic acute kidney injury",
+      "source": "pubmed",
+      "results": [
+        {
+          "id": "hit-4",
+          "title": "Urinary NLRP3 as a biomarker of septic acute kidney injury",
+          "doi": "10.0000/demo.r3",
+          "year": 2023,
+          "source": "pubmed",
+          "retrieved_at": "run-1-supp"
+        }
+      ]
+    }
+  ],
+  "output_contract": {
+    "case_id": "string",
+    "status": "string",
+    "coverage": "object",
+    "misses": "array",
+    "evidence": "array",
+    "stats": "object"
+  }
+}

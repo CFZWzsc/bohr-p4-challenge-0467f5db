@@ -80,6 +80,18 @@ description: Use when a research search supplies a known-relevant reference set 
 - 归因只基于提供的查询式、字段、年份与来源；未记录的检索策略不可见。
 - 代理精确率 `matched / retrieved_total` 会被参考集规模影响，不能当作真实精确率。
 
+## Quickstart
+
+在仓库根目录 `bohrium-competition` 执行（PowerShell，实测通过）：
+
+```powershell
+python -B "tracks\literature-search\challenges\challenge-0467f5db\06_code\submission\scripts\run_skill.py" --case "tracks\literature-search\challenges\challenge-0467f5db\06_code\submission\examples\demo-case\case.json" --out "$env:TEMP\demo_0467f5db\result.json" --work "$env:TEMP\demo_0467f5db\work"
+```
+
+- 示例输入：`examples/demo-case/case.json`，合成且自包含（`"demo": true`，所有 DOI 均为虚构的 `10.0000/...`，不指向真实论文）。
+- 实测输出：`status = "success"`，`result.json` 顶层含 `case_id`、`status`、`coverage`、`misses`、`evidence`、`stats`；同一输入两次运行结果逐字节一致。
+- 该用例只验证脚本可执行与输出契约齐全，不代表真实检索结论。
+
 ## 最小调用示例（示例，非正式案例结果）
 
 ```bash

@@ -5,6 +5,8 @@ description: Use when a research search supplies a known-relevant reference set 
 
 # 检索覆盖率与遗漏分析
 
+
+
 ## 用途与适用条件
 
 当任务要求回答"关键文献是否被找到、漏在哪个查询/字段/来源/时间窗、补检是否真的降低遗漏"时使用。适用于系统综述前期检索评估、指南证据更新、数据库选型对比与检索策略调优。
